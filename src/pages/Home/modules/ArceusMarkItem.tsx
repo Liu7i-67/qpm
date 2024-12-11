@@ -17,7 +17,7 @@ const options = [
   {
     label: '未捕获',
     value: 0,
-    color: 'gray',
+    color: '#a5acac',
   },
   {
     label: '已捕获',
@@ -27,7 +27,7 @@ const options = [
   {
     label: '研究完成',
     value: 2,
-    color: 'green',
+    color: '#166b2f',
   },
 ];
 
@@ -66,9 +66,18 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
   const {logic} = root;
   const {item} = props;
 
+  const info = options.find(i => i.value === item.status);
+
   return (
     <View
-      style={{borderWidth: 1, borderRadius: 8, padding: 8, marginBottom: 8}}>
+      style={{
+        borderWidth: 1,
+        borderRadius: 8,
+        padding: 8,
+        marginBottom: 8,
+        position: 'relative',
+        backgroundColor: `${info?.color}30`,
+      }}>
       <View style={styleView4}>
         <Text style={{flex: 1}}>{item.name}</Text>
         <View style={styleView5}>
@@ -85,9 +94,13 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
       </View>
       <View style={styleView4}>
         {options.map((o, index) => (
-          <View key={o.value} style={index === 0 ? styleView3 : styleView}>
-            <Text>{o.label}</Text>
-          </View>
+          <TouchableOpacity
+            key={o.value}
+            onPress={() => logic.changeStatus?.(item, o.value)}>
+            <View style={index === 0 ? styleView3 : styleView}>
+              <Text>{o.label}</Text>
+            </View>
+          </TouchableOpacity>
         ))}
         <TouchableOpacity
           onPress={async () => {
@@ -95,10 +108,14 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
             await Linking.openURL(url);
           }}>
           <View style={styleView2}>
-            <Text style={{color: '#a4c936'}}>百科</Text>
+            <Text>百科</Text>
           </View>
         </TouchableOpacity>
       </View>
+      <Text
+        style={{position: 'absolute', top: 4, right: 8, color: info?.color}}>
+        {info?.label}
+      </Text>
     </View>
   );
 });

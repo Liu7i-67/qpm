@@ -5,9 +5,10 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -31,6 +32,7 @@ type SectionProps = PropsWithChildren<{
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -60,7 +62,10 @@ function App(): React.JSX.Element {
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    color: '#ffff00',
   };
+
+  const [count, setCount] = useState(0);
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -77,9 +82,10 @@ function App(): React.JSX.Element {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+            222111计数Edit <Text style={styles.highlight}>{`${count}`}</Text> to
+            change this screen and then come back to see your edits.
           </Section>
+          <Button title="+1" onPress={() => setCount(o => o + 1)}></Button>
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
@@ -112,6 +118,7 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+    color: 'red',
   },
 });
 

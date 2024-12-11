@@ -6,16 +6,14 @@
  */
 
 import React from 'react';
-import {SafeAreaView, ScrollView, useColorScheme} from 'react-native';
+import {SafeAreaView, ScrollView} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Home from './src/pages/Home';
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: Colors.darker,
   };
 
   return (

@@ -1,18 +1,24 @@
 import React from 'react';
-import {observer} from '@quarkunlimit/qu-mobx';
+import {observer, useWhen} from '@quarkunlimit/qu-mobx';
 import type {IHomeProps} from './interface';
 import {Provider, useStore} from './store/RootStore';
 import {Button, Text, View} from 'react-native';
+import {ListContent} from './modules/ListContent';
 
 const Home = observer(function Home_(props: IHomeProps) {
   const root = useStore();
   const {logic} = root;
 
+  useWhen(
+    () => true,
+    () => {
+      logic.init();
+    },
+  );
+
   return (
-    <View>
-      <Text>Home</Text>
-      <Text>{logic.count}</Text>
-      <Button title="+1" onPress={logic.addItem}></Button>
+    <View style={{padding: 8}}>
+      <ListContent />
     </View>
   );
 });

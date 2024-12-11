@@ -6,16 +6,16 @@
  */
 
 import React from 'react';
-import {SafeAreaView, ScrollView} from 'react-native';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {SafeAreaView, ScrollView, StyleProp, ViewStyle} from 'react-native';
 import Home from './src/pages/Home';
+import {globalColor} from './src/globalStyle';
+
+const backgroundStyle: StyleProp<ViewStyle> = {
+  backgroundColor: globalColor.background,
+  flex: 1,
+};
 
 function App(): React.JSX.Element {
-  const backgroundStyle = {
-    backgroundColor: Colors.darker,
-  };
-
   return (
     <SafeAreaView style={backgroundStyle}>
       <ScrollView

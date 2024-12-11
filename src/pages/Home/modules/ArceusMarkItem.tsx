@@ -2,16 +2,14 @@ import React from 'react';
 import {observer} from '@quarkunlimit/qu-mobx';
 import {useStore} from '../store/RootStore';
 import {
-  Alert,
-  Button,
   Linking,
   StyleProp,
-  Text,
   TouchableOpacity,
   View,
   ViewStyle,
 } from 'react-native';
 import {IArceusMark} from '../store/RootStore/interface';
+import {QText} from '../../../components/QText';
 
 const options = [
   {
@@ -79,18 +77,18 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
         backgroundColor: `${info?.color}30`,
       }}>
       <View style={styleView4}>
-        <Text style={{flex: 1}}>{item.name}</Text>
+        <QText style={{flex: 1}}>{item.name}</QText>
         <View style={styleView5}>
           {item.attrs.map(a => (
-            <Text key={a} style={{marginRight: 8}}>
+            <QText key={a} style={{marginRight: 8}}>
               {a}
-            </Text>
+            </QText>
           ))}
         </View>
       </View>
       <View style={styleView4}>
-        <Text style={{flex: 1}}>洗翠编号:{item.no}</Text>
-        <Text style={{flex: 1}}>全国编号:{item.globalNo}</Text>
+        <QText style={{flex: 1}}>洗翠编号:{item.no}</QText>
+        <QText style={{flex: 1}}>全国编号:{item.globalNo}</QText>
       </View>
       <View style={styleView4}>
         {options.map((o, index) => (
@@ -98,7 +96,7 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
             key={o.value}
             onPress={() => logic.changeStatus?.(item, o.value)}>
             <View style={index === 0 ? styleView3 : styleView}>
-              <Text>{o.label}</Text>
+              <QText>{o.label}</QText>
             </View>
           </TouchableOpacity>
         ))}
@@ -108,14 +106,14 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
             await Linking.openURL(url);
           }}>
           <View style={styleView2}>
-            <Text>百科</Text>
+            <QText>百科</QText>
           </View>
         </TouchableOpacity>
       </View>
-      <Text
+      <QText
         style={{position: 'absolute', top: 4, right: 8, color: info?.color}}>
         {info?.label}
-      </Text>
+      </QText>
     </View>
   );
 });

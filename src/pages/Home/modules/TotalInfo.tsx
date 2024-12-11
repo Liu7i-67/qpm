@@ -1,7 +1,8 @@
 import React from 'react';
 import {observer} from '@quarkunlimit/qu-mobx';
 import {useStore} from '../store/RootStore';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+import {QText} from '../../../components/QText';
 
 export const TotalInfo = observer(function TotalInfo_() {
   const root = useStore();
@@ -9,12 +10,12 @@ export const TotalInfo = observer(function TotalInfo_() {
 
   return (
     <View style={{display: 'flex', flexDirection: 'row', marginBottom: 8}}>
-      <Text style={{marginRight: 8}}>
+      <QText style={{marginRight: 8}}>
         已捕获数量：{computed.countInfo[1]}/{logic.list.length}
-      </Text>
-      <Text>
+      </QText>
+      <QText>
         已研究完成数量：{computed.countInfo[2]}/{logic.list.length}
-      </Text>
+      </QText>
     </View>
   );
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import {observer} from '@quarkunlimit/qu-mobx';
 import {useStore} from '../store/RootStore';
-import {Text} from 'react-native';
+import {QText} from '../../../components/QText';
 
 export const Empty = observer(function Empty_() {
   const root = useStore();
@@ -11,5 +11,5 @@ export const Empty = observer(function Empty_() {
     return null;
   }
 
-  return <Text style={{textAlign: 'center'}}>没有符合条件的内容</Text>;
+  return <QText style={{textAlign: 'center'}}>没有符合条件的内容</QText>;
 });

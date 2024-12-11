@@ -1,6 +1,7 @@
 import {observer} from '@quarkunlimit/qu-mobx';
 import {useStore} from '../store/RootStore';
-import {StyleProp, Text, TouchableOpacity, View, ViewStyle} from 'react-native';
+import {StyleProp, TouchableOpacity, View, ViewStyle} from 'react-native';
+import {QText} from '../../../components/QText';
 
 const options = [
   {
@@ -29,7 +30,10 @@ const styleView: StyleProp<ViewStyle> = {
   padding: 8,
   borderWidth: 1,
   marginTop: 4,
-  borderRightWidth: 0,
+};
+const styleView2: StyleProp<ViewStyle> = {
+  ...styleView,
+  borderRightWidth: 1,
 };
 
 export const FilterRow = observer(function FilterRow_() {
@@ -38,20 +42,26 @@ export const FilterRow = observer(function FilterRow_() {
 
   return (
     <View>
-      <View style={{display: 'flex', flexDirection: 'row'}}>
+      <View
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}>
         {options.map((o, index) => (
           <TouchableOpacity
             key={o.value}
-            onPress={() => logic.changeSearch?.(o.value)}>
-            <View style={styleView}>
-              <Text>{o.label}</Text>
+            onPress={() => logic.changeSearch?.(o.value)}
+            style={styleView}>
+            <View>
+              <QText>{o.label}</QText>
             </View>
           </TouchableOpacity>
         ))}
       </View>
-      <TouchableOpacity onPress={logic.clearAll} style={styleView}>
-        <View>
-          <Text>清空标记数据</Text>
+      <TouchableOpacity onPress={logic.clearAll}>
+        <View style={styleView}>
+          <QText style={{textAlign: 'center'}}>清空标记数据</QText>
         </View>
       </TouchableOpacity>
     </View>

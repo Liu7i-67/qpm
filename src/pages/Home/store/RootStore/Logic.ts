@@ -3,6 +3,7 @@ import {IArceusMark, ILogic, TLoadingStore} from './interface';
 import {RootStore} from './';
 import initData from '../data.json';
 import {Alert} from 'react-native';
+import {ELocal, getLocal, saveLocal} from '../../../../utils/LocalStorage';
 
 export class Logic implements ILogic {
   loadingStore: TLoadingStore;
@@ -22,13 +23,22 @@ export class Logic implements ILogic {
   }
 
   async init() {
-    this.list = initData.map(i => {
-      return {
-        ...i,
-        status: 0,
-      };
+    const old = await getLocal(ELocal.ArceusMarkItem);
+    runInAction(() => {
+      if (Array.isArray(old.list) && old.list.length > 0) {
+        this.list = old.list;
+        this.status = old.status ?? -1;
+      } else {
+        this.list = initData.map(i => {
+          return {
+            ...i,
+            status: 0,
+          };
+        });
+      }
+
+      this.getShowList();
     });
-    this.getShowList();
   }
 
   getShowList() {
@@ -43,7 +53,7 @@ export class Logic implements ILogic {
 
   changeSearch(status: number) {
     this.status = status ?? -1;
-    this.getShowList();
+    this.saveData();
   }
 
   clearAll() {
@@ -66,7 +76,7 @@ export class Logic implements ILogic {
                 };
               });
 
-              this.getShowList();
+              this.saveData();
             });
           },
           style: 'destructive', // 确定按钮的样式（通常用于危险操作）
@@ -85,6 +95,14 @@ export class Logic implements ILogic {
       }
 
       return i;
+    });
+    this.saveData();
+  }
+
+  async saveData() {
+    await saveLocal(ELocal.ArceusMarkItem, {
+      list: this.list,
+      status: this.status,
     });
     this.getShowList();
   }

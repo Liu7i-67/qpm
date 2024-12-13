@@ -7,6 +7,7 @@ import {ListContent} from './modules/ListContent';
 import {TotalInfo} from './modules/TotalInfo';
 import {FilterRow} from './modules/FilterRow';
 import {Empty} from './modules/Empty';
+import {QImg} from '../../components/QImg';
 
 const Home = observer(function Home_(props: IHomeProps) {
   const root = useStore();
@@ -21,17 +22,7 @@ const Home = observer(function Home_(props: IHomeProps) {
 
   return (
     <View style={{padding: 8}}>
-      {logic.loading && (
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={true}
-          onRequestClose={() => {}}>
-          <View>
-            <ActivityIndicator size="large" />
-          </View>
-        </Modal>
-      )}
+      <QImg />
       <FilterRow />
       <TotalInfo />
       <ListContent />

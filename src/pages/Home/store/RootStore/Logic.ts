@@ -17,7 +17,6 @@ export class Logic implements ILogic {
   list: IArceusMark[] = [];
   showList: IArceusMark[] = [];
   status = -1;
-  loading = false;
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore;
     this.loadingStore = rootStore.loadingStore;
@@ -55,6 +54,8 @@ export class Logic implements ILogic {
       this.showList = this.list;
     } else if (this.status === 1) {
       this.showList = this.list.filter(i => i.status !== 0);
+    } else if (this.status === 3) {
+      this.showList = this.list.filter(i => i.status !== 2);
     } else {
       this.showList = this.list.filter(i => i.status === this.status);
     }

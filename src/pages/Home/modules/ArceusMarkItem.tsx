@@ -12,6 +12,7 @@ import {
 import {IArceusMark} from '../store/RootStore/interface';
 import {QText} from '../../../components/QText';
 import {imageSource} from '../../../utils/imageSource';
+import {QAttr} from '../../../components/QAttr';
 
 const options = [
   {
@@ -84,9 +85,7 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
           <QText>{item.name}</QText>
           <View style={styleView4}>
             {item.attrs.map(a => (
-              <QText key={a} style={{marginRight: 8}}>
-                {a}
-              </QText>
+              <QAttr key={a} attr={a} />
             ))}
           </View>
           <QText>洗翠编号:{item.no}</QText>

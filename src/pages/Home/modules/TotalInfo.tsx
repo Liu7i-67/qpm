@@ -9,7 +9,7 @@ export const TotalInfo = observer(function TotalInfo_() {
   const {computed, logic} = root;
 
   return (
-    <View style={{display: 'flex', flexDirection: 'row', marginBottom: 8}}>
+    <View style={{display: 'flex', flexDirection: 'row', marginVertical: 8}}>
       <QText style={{marginRight: 8}}>
         已捕获数量：{computed.countInfo[1]}/{logic.list.length}
       </QText>

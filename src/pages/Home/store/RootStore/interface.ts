@@ -3,6 +3,7 @@ import {RootStore} from './';
 import {Logic} from './Logic';
 import {Computed} from './Computed';
 import {GlobalStore} from '../../../../globalStore';
+import {FlatList} from 'react-native';
 
 export type TLoadingStore = LoadingStore<'loading' | 'init' | 'saveData'>;
 
@@ -46,7 +47,9 @@ export interface IRootStore {
   loadingStore: TLoadingStore;
 }
 
-export interface IRefs {}
+export interface IRefs {
+  listRef: React.MutableRefObject<FlatList<IArceusMark> | null>;
+}
 
 export interface IArceusMark {
   /** @param 洗翠编号 */

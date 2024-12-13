@@ -1,31 +1,29 @@
-import {
-  makeAutoObservable,
-  runInAction,
-  withRequest,
-} from '@quarkunlimit/qu-mobx';
-import {IArceusMark, ILogic, TLoadingStore} from './interface';
+import {makeAutoObservable, runInAction} from '@quarkunlimit/qu-mobx';
+import {IArceusMark, ILogic, IPagination, TLoadingStore} from './interface';
 import {RootStore} from './';
 import initData from '../data.json';
-import {Alert, ImageSourcePropType} from 'react-native';
+import {Alert} from 'react-native';
 import {ELocal, getLocal, saveLocal} from '../../../../utils/LocalStorage';
 import {to} from '../../../../utils/tools';
+
+const initPagination: IPagination = {
+  pageSize: 20,
+  index: 1,
+};
 
 export class Logic implements ILogic {
   loadingStore: TLoadingStore;
   rootStore: RootStore;
-  count = 0;
   list: IArceusMark[] = [];
-  showList: IArceusMark[] = [];
   status = -1;
+  pagination: IPagination = {
+    ...initPagination,
+  };
 
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore;
     this.loadingStore = rootStore.loadingStore;
     makeAutoObservable(this, {}, {autoBind: true});
-  }
-
-  addItem() {
-    this.count = this.count + 1;
   }
 
   async init() {
@@ -46,25 +44,13 @@ export class Logic implements ILogic {
         });
       }
 
-      this.getShowList();
       global.logic.hiddenLoading();
     });
   }
 
-  getShowList() {
-    if (this.status === -1) {
-      this.showList = this.list;
-    } else if (this.status === 1) {
-      this.showList = this.list.filter(i => i.status !== 0);
-    } else if (this.status === 3) {
-      this.showList = this.list.filter(i => i.status !== 2);
-    } else {
-      this.showList = this.list.filter(i => i.status === this.status);
-    }
-  }
-
   changeSearch(status: number) {
     this.status = status ?? -1;
+    this.pagination.index = 1;
     this.saveData();
   }
 
@@ -120,8 +106,15 @@ export class Logic implements ILogic {
       status: this.status,
     });
     runInAction(() => {
-      this.getShowList();
       global.logic.hiddenLoading();
     });
+  }
+
+  showMore() {
+    const {computed} = this.rootStore;
+    if (!computed.haveMore) {
+      return;
+    }
+    this.pagination.index = this.pagination.index + 1;
   }
 }

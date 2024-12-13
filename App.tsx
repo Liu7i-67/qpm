@@ -6,7 +6,13 @@
  */
 
 import React from 'react';
-import {SafeAreaView, ScrollView, StyleProp, ViewStyle} from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  StyleProp,
+  View,
+  ViewStyle,
+} from 'react-native';
 import Home from './src/pages/Home';
 import {globalColor} from './src/globalStyle';
 import {observer} from '@quarkunlimit/qu-mobx';
@@ -20,14 +26,10 @@ const backgroundStyle: StyleProp<ViewStyle> = {
 
 const App = observer(function App_(): React.JSX.Element {
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <LoadingModal />
-        <Home />
-      </ScrollView>
-    </SafeAreaView>
+    <View style={backgroundStyle}>
+      <LoadingModal />
+      <Home />
+    </View>
   );
 });
 

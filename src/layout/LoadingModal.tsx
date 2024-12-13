@@ -1,7 +1,8 @@
 import React from 'react';
 import {observer} from '@quarkunlimit/qu-mobx';
 import {useStore} from '../globalStore';
-import {ActivityIndicator, Modal, Text, View} from 'react-native';
+import {ActivityIndicator, Modal, View} from 'react-native';
+import {QText} from '../components/QText';
 
 export const LoadingModal = observer(function LoadingModal_() {
   const root = useStore();
@@ -18,7 +19,7 @@ export const LoadingModal = observer(function LoadingModal_() {
           height: '100%',
         }}>
         <ActivityIndicator size="large" color="#fff" />
-        <Text>{logic.loadingText}</Text>
+        <QText>{logic.loadingText}</QText>
       </View>
     </Modal>
   );

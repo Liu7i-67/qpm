@@ -2,12 +2,11 @@ import React from 'react';
 import {observer, useWhen} from '@quarkunlimit/qu-mobx';
 import type {IHomeProps} from './interface';
 import {Provider, useStore} from './store/RootStore';
-import {ActivityIndicator, Modal, View} from 'react-native';
-import {ListContent} from './modules/ListContent';
+import {FlatList, View} from 'react-native';
 import {TotalInfo} from './modules/TotalInfo';
 import {FilterRow} from './modules/FilterRow';
 import {Empty} from './modules/Empty';
-import {QImg} from '../../components/QImg';
+import {ArceusMarkItem} from './modules/ArceusMarkItem';
 
 const Home = observer(function Home_(props: IHomeProps) {
   const root = useStore();
@@ -21,12 +20,21 @@ const Home = observer(function Home_(props: IHomeProps) {
   );
 
   return (
-    <View style={{padding: 8}}>
-      <FilterRow />
-      <TotalInfo />
-      <ListContent />
-      <Empty />
-    </View>
+    <FlatList
+      style={{padding: 8}}
+      ListHeaderComponent={
+        <View>
+          <FilterRow />
+          <TotalInfo />
+        </View>
+      }
+      initialNumToRender={4}
+      onEndReached={logic.showMore}
+      onEndReachedThreshold={0.4}
+      ListEmptyComponent={<Empty />}
+      data={computed.dataSource}
+      renderItem={({item}) => <ArceusMarkItem item={item} />}
+      keyExtractor={item => item.no}></FlatList>
   );
 });
 

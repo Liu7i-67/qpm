@@ -5,9 +5,9 @@ import {QText} from '../../../components/QText';
 
 export const Empty = observer(function Empty_() {
   const root = useStore();
-  const {logic} = root;
+  const {computed} = root;
 
-  if (logic.showList.length) {
+  if (computed.showList.length) {
     return null;
   }
 

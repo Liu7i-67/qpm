@@ -39,4 +39,6 @@ export interface IArceusMark {
   attrs: string[];
   /** @param 状态 0-未捕获 1-已捕获 2-已完成 */
   status: number;
+  /** @param 图像编号 */
+  imageNo: number;
 }

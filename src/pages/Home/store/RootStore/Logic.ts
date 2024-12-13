@@ -6,7 +6,7 @@ import {
 import {IArceusMark, ILogic, TLoadingStore} from './interface';
 import {RootStore} from './';
 import initData from '../data.json';
-import {Alert} from 'react-native';
+import {Alert, ImageSourcePropType} from 'react-native';
 import {ELocal, getLocal, saveLocal} from '../../../../utils/LocalStorage';
 import {to} from '../../../../utils/tools';
 
@@ -41,6 +41,7 @@ export class Logic implements ILogic {
           return {
             ...i,
             status: 0,
+            imageNo: i.index,
           };
         });
       }
@@ -84,6 +85,7 @@ export class Logic implements ILogic {
                 return {
                   ...i,
                   status: 0,
+                  imageNo: i.index,
                 };
               });
 

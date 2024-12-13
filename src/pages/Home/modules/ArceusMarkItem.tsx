@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import {IArceusMark} from '../store/RootStore/interface';
 import {QText} from '../../../components/QText';
+import {imageSource} from '../../../utils/imageSource';
 
 const options = [
   {
@@ -53,10 +54,6 @@ const styleView4: StyleProp<ViewStyle> = {
   display: 'flex',
   flexDirection: 'row',
 };
-const styleView5: StyleProp<ViewStyle> = {
-  ...styleView4,
-  flex: 1,
-};
 
 export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
   item: IArceusMark;
@@ -77,21 +74,26 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
         position: 'relative',
         backgroundColor: `${info?.color}30`,
       }}>
-      <Image source={require('../../../assets/imgs/pkm/pkm_1.png')} />
-      <View style={styleView4}>
-        <QText style={{flex: 1}}>{item.name}</QText>
-        <View style={styleView5}>
-          {item.attrs.map(a => (
-            <QText key={a} style={{marginRight: 8}}>
-              {a}
-            </QText>
-          ))}
+      <View style={{display: 'flex', flexDirection: 'row', marginBottom: 4}}>
+        <Image
+          source={imageSource[(item.imageNo || 1) as 1]}
+          style={{backgroundColor: '#00000050', borderRadius: 4}}
+        />
+        <View
+          style={{flex: 1, paddingLeft: 16, justifyContent: 'space-between'}}>
+          <QText>{item.name}</QText>
+          <View style={styleView4}>
+            {item.attrs.map(a => (
+              <QText key={a} style={{marginRight: 8}}>
+                {a}
+              </QText>
+            ))}
+          </View>
+          <QText>洗翠编号:{item.no}</QText>
+          <QText>全国编号:{item.globalNo}</QText>
         </View>
       </View>
-      <View style={styleView4}>
-        <QText style={{flex: 1}}>洗翠编号:{item.no}</QText>
-        <QText style={{flex: 1}}>全国编号:{item.globalNo}</QText>
-      </View>
+
       <View style={styleView4}>
         {options.map((o, index) => (
           <TouchableOpacity

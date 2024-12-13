@@ -2,8 +2,9 @@ import {LoadingStore} from '@quarkunlimit/qu-mobx';
 import {RootStore} from './';
 import {Logic} from './Logic';
 import {Computed} from './Computed';
+import {GlobalStore} from '../../../../globalStore';
 
-export type TLoadingStore = LoadingStore<'loading'>;
+export type TLoadingStore = LoadingStore<'loading' | 'init' | 'saveData'>;
 
 /** 逻辑接口 */
 export interface ILogic {
@@ -20,8 +21,12 @@ export interface IComputed {
 export interface IRootStore {
   logic: Logic;
   computed: Computed;
+  refs: IRefs;
+  global: GlobalStore;
   loadingStore: TLoadingStore;
 }
+
+export interface IRefs {}
 
 export interface IArceusMark {
   /** @param 洗翠编号 */

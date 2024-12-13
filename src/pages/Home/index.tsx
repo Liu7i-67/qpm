@@ -2,7 +2,7 @@ import React from 'react';
 import {observer, useWhen} from '@quarkunlimit/qu-mobx';
 import type {IHomeProps} from './interface';
 import {Provider, useStore} from './store/RootStore';
-import {View} from 'react-native';
+import {ActivityIndicator, Modal, View} from 'react-native';
 import {ListContent} from './modules/ListContent';
 import {TotalInfo} from './modules/TotalInfo';
 import {FilterRow} from './modules/FilterRow';
@@ -10,7 +10,7 @@ import {Empty} from './modules/Empty';
 
 const Home = observer(function Home_(props: IHomeProps) {
   const root = useStore();
-  const {logic} = root;
+  const {logic, computed} = root;
 
   useWhen(
     () => true,
@@ -21,6 +21,17 @@ const Home = observer(function Home_(props: IHomeProps) {
 
   return (
     <View style={{padding: 8}}>
+      {logic.loading && (
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={true}
+          onRequestClose={() => {}}>
+          <View>
+            <ActivityIndicator size="large" />
+          </View>
+        </Modal>
+      )}
       <FilterRow />
       <TotalInfo />
       <ListContent />

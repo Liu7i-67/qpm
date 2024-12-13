@@ -1,9 +1,14 @@
-import {makeAutoObservable, runInAction} from '@quarkunlimit/qu-mobx';
+import {
+  makeAutoObservable,
+  runInAction,
+  withRequest,
+} from '@quarkunlimit/qu-mobx';
 import {IArceusMark, ILogic, TLoadingStore} from './interface';
 import {RootStore} from './';
 import initData from '../data.json';
 import {Alert} from 'react-native';
 import {ELocal, getLocal, saveLocal} from '../../../../utils/LocalStorage';
+import {to} from '../../../../utils/tools';
 
 export class Logic implements ILogic {
   loadingStore: TLoadingStore;
@@ -12,6 +17,7 @@ export class Logic implements ILogic {
   list: IArceusMark[] = [];
   showList: IArceusMark[] = [];
   status = -1;
+  loading = false;
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore;
     this.loadingStore = rootStore.loadingStore;
@@ -23,9 +29,11 @@ export class Logic implements ILogic {
   }
 
   async init() {
-    const old = await getLocal(ELocal.ArceusMarkItem);
+    const {global} = this.rootStore;
+    global.logic.showLoading('数据加载中...');
+    const [err, old] = await to(getLocal(ELocal.ArceusMarkItem));
     runInAction(() => {
-      if (Array.isArray(old.list) && old.list.length > 0) {
+      if (!err && Array.isArray(old.list) && old.list.length > 0) {
         this.list = old.list;
         this.status = old.status ?? -1;
       } else {
@@ -38,6 +46,7 @@ export class Logic implements ILogic {
       }
 
       this.getShowList();
+      global.logic.hiddenLoading();
     });
   }
 
@@ -100,10 +109,15 @@ export class Logic implements ILogic {
   }
 
   async saveData() {
+    const {global} = this.rootStore;
+    global.logic.showLoading('数据保存中...');
     await saveLocal(ELocal.ArceusMarkItem, {
       list: this.list,
       status: this.status,
     });
-    this.getShowList();
+    runInAction(() => {
+      this.getShowList();
+      global.logic.hiddenLoading();
+    });
   }
 }

@@ -24,4 +24,9 @@ export class Computed implements IComputed {
 
     return info;
   }
+
+  get loading() {
+    const {loadingStore} = this.rootStore;
+    return loadingStore.get('init') || loadingStore.get('saveData');
+  }
 }

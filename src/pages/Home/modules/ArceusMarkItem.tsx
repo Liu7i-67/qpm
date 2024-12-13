@@ -2,6 +2,7 @@ import React from 'react';
 import {observer} from '@quarkunlimit/qu-mobx';
 import {useStore} from '../store/RootStore';
 import {
+  Image,
   Linking,
   StyleProp,
   TouchableOpacity,
@@ -76,6 +77,7 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
         position: 'relative',
         backgroundColor: `${info?.color}30`,
       }}>
+      <Image source={require('../../../assets/imgs/pkm/pkm_1.png')} />
       <View style={styleView4}>
         <QText style={{flex: 1}}>{item.name}</QText>
         <View style={styleView5}>

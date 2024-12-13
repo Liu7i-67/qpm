@@ -17,6 +17,7 @@ export class Logic implements ILogic {
   list: IArceusMark[] = [];
   showList: IArceusMark[] = [];
   status = -1;
+
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore;
     this.loadingStore = rootStore.loadingStore;

@@ -22,7 +22,6 @@ const Home = observer(function Home_(props: IHomeProps) {
 
   return (
     <View style={{padding: 8}}>
-      <QImg />
       <FilterRow />
       <TotalInfo />
       <ListContent />

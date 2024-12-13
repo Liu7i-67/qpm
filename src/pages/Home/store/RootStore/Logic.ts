@@ -31,7 +31,7 @@ export class Logic implements ILogic {
     global.logic.showLoading('数据加载中...');
     const [err, old] = await to(getLocal(ELocal.ArceusMarkItem));
     runInAction(() => {
-      if (!err && Array.isArray(old.list) && old.list.length > 0) {
+      if (!err && Array.isArray(old?.list) && old.list.length > 0) {
         this.list = old.list;
         this.status = old.status ?? -1;
       } else {

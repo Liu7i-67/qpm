@@ -15,6 +15,8 @@ import {observer} from '@quarkunlimit/qu-mobx';
 import {Provider, useStore} from './src/globalStore/index';
 import {LoadingModal} from './src/layout/LoadingModal';
 import {EPage} from './src/interface';
+import Kitakami from './src/pages/Kitakami';
+import Blueberry from './src/pages/Blueberry';
 
 const backgroundStyle: StyleProp<ViewStyle> = {
   backgroundColor: globalColor.background,
@@ -31,6 +33,8 @@ const App = observer(function App_(): React.JSX.Element {
       {logic.currentPage === EPage.Home && <Home />}
       {logic.currentPage === EPage.Hisui && <Hisui />}
       {logic.currentPage === EPage.Paldea && <Paldea />}
+      {logic.currentPage === EPage.Kitakami && <Kitakami />}
+      {logic.currentPage === EPage.Blueberry && <Blueberry />}
     </View>
   );
 });

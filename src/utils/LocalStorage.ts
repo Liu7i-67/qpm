@@ -5,6 +5,10 @@ export enum ELocal {
   ArceusMarkItem = 'ArceusMarkItem',
   /** @param 帕底亚图鉴数据 */
   PaldeaDex = 'PaldeaDex',
+  /** @param 北上图鉴数据 */
+  KitakamiDex = 'KitakamiDex',
+  /** @param 蓝莓图鉴数据 */
+  BlueberryDex = 'BlueberryDex',
 }
 
 export const saveLocal = (key: ELocal, value: any) => {

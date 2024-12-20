@@ -6,15 +6,10 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleProp,
-  View,
-  ViewStyle,
-} from 'react-native';
+import {StyleProp, View, ViewStyle} from 'react-native';
 import Home from './src/pages/Home';
 import Hisui from './src/pages/Hisui';
+import Paldea from './src/pages/Paldea';
 import {globalColor} from './src/globalStyle';
 import {observer} from '@quarkunlimit/qu-mobx';
 import {Provider, useStore} from './src/globalStore/index';
@@ -35,6 +30,7 @@ const App = observer(function App_(): React.JSX.Element {
       <LoadingModal />
       {logic.currentPage === EPage.Home && <Home />}
       {logic.currentPage === EPage.Hisui && <Hisui />}
+      {logic.currentPage === EPage.Paldea && <Paldea />}
     </View>
   );
 });

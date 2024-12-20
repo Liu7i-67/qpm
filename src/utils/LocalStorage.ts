@@ -3,6 +3,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 export enum ELocal {
   /** @param 阿尔宙斯信息 */
   ArceusMarkItem = 'ArceusMarkItem',
+  /** @param 帕底亚图鉴数据 */
+  PaldeaDex = 'PaldeaDex',
 }
 
 export const saveLocal = (key: ELocal, value: any) => {

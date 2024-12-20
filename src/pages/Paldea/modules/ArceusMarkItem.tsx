@@ -25,11 +25,6 @@ const options = [
     value: 1,
     color: '#13c2c2',
   },
-  {
-    label: '研究完成',
-    value: 2,
-    color: '#166b2f',
-  },
 ];
 
 const styleView: StyleProp<ViewStyle> = {
@@ -37,6 +32,7 @@ const styleView: StyleProp<ViewStyle> = {
   borderWidth: 1,
   marginTop: 4,
   borderRightWidth: 0,
+  flex: 1,
 };
 
 const styleView2: StyleProp<ViewStyle> = {
@@ -87,7 +83,7 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
               <QAttr key={a} attr={a} />
             ))}
           </View>
-          <QText>洗翠编号:{item.no}</QText>
+          <QText>帕底亚编号:{item.no}</QText>
           <QText>全国编号:{item.globalNo}</QText>
         </View>
       </View>
@@ -96,20 +92,18 @@ export const ArceusMarkItem = observer(function ArceusMarkItem_(props: {
         {options.map((o, index) => (
           <TouchableOpacity
             key={o.value}
-            onPress={() => logic.changeStatus?.(item, o.value)}>
-            <View style={index === 0 ? styleView3 : styleView}>
-              <QText>{o.label}</QText>
-            </View>
+            onPress={() => logic.changeStatus?.(item, o.value)}
+            style={index === 0 ? styleView3 : styleView}>
+            <QText style={{textAlign: 'center'}}>{o.label}</QText>
           </TouchableOpacity>
         ))}
         <TouchableOpacity
           onPress={async () => {
             const url = `https://wiki.52poke.com/wiki/${item.name}#获得方式`;
             await Linking.openURL(url);
-          }}>
-          <View style={styleView2}>
-            <QText>百科</QText>
-          </View>
+          }}
+          style={styleView2}>
+          <QText style={{textAlign: 'center'}}>百科</QText>
         </TouchableOpacity>
       </View>
       <QText

@@ -4,7 +4,7 @@ import {RootStore} from './';
 import {Alert} from 'react-native';
 import {ELocal, getLocal, saveLocal} from '../../../../utils/LocalStorage';
 import {to} from '../../../../utils/tools';
-import initData from '../../../../assets/json/xc.json';
+import initData from '../../../../assets/json/pdy.json';
 
 const initPagination: IPagination = {
   pageSize: 20,
@@ -29,12 +29,12 @@ export class Logic implements ILogic {
   async init() {
     const {global} = this.rootStore;
     global.logic.showLoading('数据加载中...');
-    const [err, old] = await to(getLocal(ELocal.ArceusMarkItem));
+    const [err, old] = await to(getLocal(ELocal.PaldeaDex));
     runInAction(() => {
       if (!err && Array.isArray(old?.list) && old.list.length > 0) {
         this.list = old.list;
         this.status = old.status ?? -1;
-      } else {
+      } else if (initData) {
         this.list = initData.map(i => {
           return {
             ...i,
@@ -101,7 +101,7 @@ export class Logic implements ILogic {
   async saveData() {
     const {global} = this.rootStore;
     global.logic.showLoading('数据保存中...');
-    await saveLocal(ELocal.ArceusMarkItem, {
+    await saveLocal(ELocal.PaldeaDex, {
       list: this.list,
       status: this.status,
     });

@@ -14,10 +14,12 @@ import {
   ViewStyle,
 } from 'react-native';
 import Home from './src/pages/Home';
+import Hisui from './src/pages/Hisui';
 import {globalColor} from './src/globalStyle';
 import {observer} from '@quarkunlimit/qu-mobx';
-import {Provider} from './src/globalStore/index';
+import {Provider, useStore} from './src/globalStore/index';
 import {LoadingModal} from './src/layout/LoadingModal';
+import {EPage} from './src/interface';
 
 const backgroundStyle: StyleProp<ViewStyle> = {
   backgroundColor: globalColor.background,
@@ -25,10 +27,14 @@ const backgroundStyle: StyleProp<ViewStyle> = {
 };
 
 const App = observer(function App_(): React.JSX.Element {
+  const global = useStore();
+  const {logic} = global;
+
   return (
     <View style={backgroundStyle}>
       <LoadingModal />
-      <Home />
+      {logic.currentPage === EPage.Home && <Home />}
+      {logic.currentPage === EPage.Hisui && <Hisui />}
     </View>
   );
 });

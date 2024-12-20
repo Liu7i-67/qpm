@@ -1,6 +1,12 @@
 import {observer} from '@quarkunlimit/qu-mobx';
 import {useStore} from '../store/RootStore';
-import {StyleProp, TouchableOpacity, View, ViewStyle} from 'react-native';
+import {
+  Pressable,
+  StyleProp,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native';
 import {QText} from '../../../components/QText';
 
 const options = [
@@ -31,17 +37,26 @@ const styleView: StyleProp<ViewStyle> = {
   borderWidth: 1,
   marginTop: 4,
 };
-const styleView2: StyleProp<ViewStyle> = {
-  ...styleView,
-  borderRightWidth: 1,
-};
 
 export const FilterRow = observer(function FilterRow_() {
   const root = useStore();
-  const {logic} = root;
+  const {logic, global} = root;
 
   return (
     <View>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}>
+        <Pressable onPress={global.logic.backHome}>
+          <QText>返回首页</QText>
+        </Pressable>
+        <TouchableOpacity onPress={logic.clearAll} style={styleView}>
+          <QText style={{textAlign: 'center'}}>清空标记数据</QText>
+        </TouchableOpacity>
+      </View>
       <View
         style={{
           display: 'flex',
@@ -59,11 +74,6 @@ export const FilterRow = observer(function FilterRow_() {
           </TouchableOpacity>
         ))}
       </View>
-      <TouchableOpacity onPress={logic.clearAll}>
-        <View style={styleView}>
-          <QText style={{textAlign: 'center'}}>清空标记数据</QText>
-        </View>
-      </TouchableOpacity>
     </View>
   );
 });

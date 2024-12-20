@@ -11,11 +11,31 @@ export type TLoadingStore = LoadingStore<'loading' | 'init' | 'saveData'>;
 export interface ILogic {
   loadingStore: TLoadingStore;
   rootStore: RootStore;
+  /** @param 分页信息 */
+  pagination: IPagination;
+  /** @param 数据源 */
+  list: IArceusMark[];
+  /** @param 筛选条件 图鉴状态 */
+  status: number;
+  /** @function 初始化数据 */
+  init(): Promise<void>;
+  /** @function 修改过滤状态 */
+  changeSearch(status: number): void;
+  /** @function 清空保存的数据 */
+  clearAll(): void;
+  /** @function 修改图鉴的收集信息 */
+  changeStatus(item: IArceusMark, status: number): void;
+  /** @function 保存数据 */
+  saveData(): Promise<void>;
 }
 
 /** 计算属性接口 */
 export interface IComputed {
   rootStore: RootStore;
+  /** @param 符合筛选跳转的数据源 */
+  showList: IArceusMark[];
+  /** @param 分页展示的数据源 */
+  dataSource: IArceusMark[];
 }
 
 /** 根Store接口 */

@@ -71,7 +71,7 @@ export const QAttr = React.memo(function QAttr_(props: {attr: string}) {
       </View>
       <View
         style={{
-          width: 38,
+          width: 50,
           backgroundColor: '#00000030',
           height: '100%',
           padding: 4,

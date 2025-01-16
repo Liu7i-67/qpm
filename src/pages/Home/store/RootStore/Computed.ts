@@ -28,6 +28,10 @@ export class Computed implements IComputed {
         label: '洗翠图鉴',
         page: EPage.Hisui,
       },
+      {
+        label: '帕底亚三明治图鉴',
+        page: EPage.Sandwich,
+      },
     ];
   }
 }

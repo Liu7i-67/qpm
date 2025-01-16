@@ -9,4 +9,6 @@ export enum EPage {
   Kitakami = 'Kitakami',
   /** @param 蓝莓图鉴 */
   Blueberry = 'Blueberry',
+  /** @param 三明治图鉴 */
+  Sandwich = 'Sandwich',
 }

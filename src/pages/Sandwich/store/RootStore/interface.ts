@@ -15,16 +15,10 @@ export interface ILogic {
   pagination: IPagination;
   /** @param 数据源 */
   list: ISandwich[];
-  /** @param 筛选条件 图鉴状态 */
-  status: number;
   /** @function 初始化数据 */
   init(): Promise<void>;
-  /** @function 修改过滤状态 */
-  changeSearch(status: number): void;
   /** @function 清空保存的数据 */
   clearAll(): void;
-  /** @function 修改图鉴的收集信息 */
-  changeStatus(item: ISandwich, status: number): void;
   /** @function 保存数据 */
   saveData(): Promise<void>;
 }

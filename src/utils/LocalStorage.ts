@@ -9,6 +9,8 @@ export enum ELocal {
   KitakamiDex = 'KitakamiDex',
   /** @param 蓝莓图鉴数据 */
   BlueberryDex = 'BlueberryDex',
+  /** @param 三明治图鉴数据 */
+  SandwichDex = 'SandwichDex',
 }
 
 export const saveLocal = (key: ELocal, value: any) => {

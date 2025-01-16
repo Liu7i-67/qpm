@@ -15,7 +15,6 @@ export class Logic implements ILogic {
   loadingStore: TLoadingStore;
   rootStore: RootStore;
   list: ISandwich[] = [];
-  status = -1;
   pagination: IPagination = {
     ...initPagination,
   };
@@ -29,23 +28,16 @@ export class Logic implements ILogic {
   async init() {
     const {global} = this.rootStore;
     global.logic.showLoading('数据加载中...');
-    const [err, old] = await to(getLocal(ELocal.PaldeaDex));
+    const [err, old] = await to(getLocal(ELocal.SandwichDex));
     runInAction(() => {
       if (!err && Array.isArray(old?.list) && old.list.length > 0) {
         this.list = old.list;
-        this.status = old.status ?? -1;
       } else if (initData) {
         this.list = initData;
       }
 
       global.logic.hiddenLoading();
     });
-  }
-
-  changeSearch(status: number) {
-    this.status = status ?? -1;
-    this.pagination.index = 1;
-    this.saveData();
   }
 
   clearAll() {
@@ -76,19 +68,12 @@ export class Logic implements ILogic {
       {cancelable: true}, // 是否可以通过点击外部区域取消弹窗
     );
   }
-  changeStatus(item: ISandwich, status: number) {
-    this.list = this.list.map(i => {
-      return i;
-    });
-    this.saveData();
-  }
 
   async saveData() {
     const {global} = this.rootStore;
     global.logic.showLoading('数据保存中...');
-    await saveLocal(ELocal.PaldeaDex, {
+    await saveLocal(ELocal.SandwichDex, {
       list: this.list,
-      status: this.status,
     });
     runInAction(() => {
       global.logic.hiddenLoading();

@@ -11,7 +11,7 @@ export class Computed implements IComputed {
 
   get countInfo() {
     const {logic} = this.rootStore;
-    return logic.list.filter(i => i.status === 1).length;
+    return logic.list.length;
   }
 
   get loading() {
@@ -21,18 +21,8 @@ export class Computed implements IComputed {
 
   get showList() {
     const {logic} = this.rootStore;
-    if (logic.status === -1) {
-      return logic.list;
-    }
 
-    if (logic.status === 1) {
-      return logic.list.filter(i => i.status !== 0);
-    }
-    if (logic.status === 3) {
-      return logic.list.filter(i => i.status !== 2);
-    }
-
-    return logic.list.filter(i => i.status === logic.status);
+    return logic.list;
   }
 
   get dataSource() {

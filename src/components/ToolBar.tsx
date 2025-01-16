@@ -13,7 +13,6 @@ export const ToolBar = observer(function ToolBar_() {
     <View
       style={{
         height: 60,
-        borderTopColor: '#666',
         borderTopWidth: 1,
         flexDirection: 'row',
         alignItems: 'center',

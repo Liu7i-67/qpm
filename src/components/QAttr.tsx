@@ -1,6 +1,6 @@
 import React from 'react';
 import {QText} from './QText';
-import {Image, View} from 'react-native';
+import {Image, StyleProp, View, ViewStyle} from 'react-native';
 
 export const attrColors = {
   一般: '#bbbbaa',
@@ -44,7 +44,10 @@ export const attrIndex = {
   钢: 8,
 };
 
-export const QAttr = React.memo(function QAttr_(props: {attr: string}) {
+export const QAttr = React.memo(function QAttr_(props: {
+  attr: string;
+  style?: ViewStyle;
+}) {
   const marginTop = attrIndex[props.attr as '火'] * -25;
   const color = attrColors[props.attr as '火'];
 
@@ -56,6 +59,7 @@ export const QAttr = React.memo(function QAttr_(props: {attr: string}) {
         backgroundColor: color,
         borderRadius: 2,
         marginRight: 4,
+        ...props.style,
       }}>
       <View style={{paddingHorizontal: 4, paddingVertical: 2}}>
         <View

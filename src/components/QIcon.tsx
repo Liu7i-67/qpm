@@ -3,6 +3,9 @@ import {Image} from 'react-native';
 
 const icons = {
   home: require('../assets/icons/home.png'),
+  search: require('../assets/icons/search.png'),
+  delete: require('../assets/icons/delete.png'),
+  close: require('../assets/icons/close.png'),
 } as const;
 
 export const QIcon = function QIcon_(props: {type?: keyof typeof icons}) {

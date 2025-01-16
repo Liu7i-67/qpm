@@ -8,6 +8,7 @@ import {FilterRow} from './modules/FilterRow';
 import {Empty} from './modules/Empty';
 import {ScrollToTop} from './modules/ScrollToTop';
 import {SandwichItem} from './modules/SandwichItem';
+import {FilterModal} from './modules/FilterModal';
 
 const Sandwich = observer(function Sandwich_(props: IPaldeaProps) {
   const root = useStore();
@@ -39,6 +40,7 @@ const Sandwich = observer(function Sandwich_(props: IPaldeaProps) {
         renderItem={({item}) => <SandwichItem item={item} />}
         keyExtractor={item => `${item.id}`}></FlatList>
       <ScrollToTop />
+      <FilterModal />
     </View>
   );
 });

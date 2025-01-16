@@ -6,11 +6,13 @@ import {QText} from '../../../components/QText';
 
 export const TotalInfo = observer(function TotalInfo_() {
   const root = useStore();
-  const {computed, logic} = root;
+  const {computed} = root;
 
   return (
     <View style={{display: 'flex', flexDirection: 'row', marginVertical: 8}}>
-      <QText style={{marginRight: 8}}>相关数量： {logic.list.length}</QText>
+      <QText style={{marginRight: 8}}>
+        相关数量： {computed.showList.length}
+      </QText>
     </View>
   );
 });

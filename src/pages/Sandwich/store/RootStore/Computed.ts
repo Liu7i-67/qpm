@@ -22,6 +22,12 @@ export class Computed implements IComputed {
   get showList() {
     const {logic} = this.rootStore;
 
+    if (logic.filterList.length > 0) {
+      return logic.list.filter(e => {
+        return logic.filterList.every(i => e.effect.includes(i));
+      });
+    }
+
     return logic.list;
   }
 

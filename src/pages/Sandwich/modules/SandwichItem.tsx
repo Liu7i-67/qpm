@@ -13,6 +13,7 @@ import {ISandwich} from '../store/RootStore/interface';
 import {QText} from '../../../components/QText';
 import {imageSource} from '../../../utils/imageSource';
 import {QAttr} from '../../../components/QAttr';
+import {globalColor} from '../../../globalStyle';
 
 const options = [
   {
@@ -119,6 +120,21 @@ export const SandwichItem = observer(function SandwichItem_(props: {
             });
           })}
         </View>
+      )}
+      {item.place && (
+        <QText
+          style={{
+            position: 'absolute',
+            top: 4,
+            right: 8,
+            backgroundColor: globalColor.hightLight,
+            paddingVertical: 2,
+            paddingHorizontal: 6,
+            borderTopLeftRadius: 8,
+            borderBottomRightRadius: 8,
+          }}>
+          可购买
+        </QText>
       )}
     </View>
   );

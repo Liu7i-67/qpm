@@ -1562,4 +1562,5 @@ export const imageSource = {
   1561: require('../assets/imgs/pkm/pkm_1561.png'),
   1562: require('../assets/imgs/pkm/pkm_1562.png'),
   1563: require('../assets/imgs/pkm/pkm_1563.png'),
+  1564: require('../assets/imgs/pkm/pkm_1564.png'),
 };

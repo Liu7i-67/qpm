@@ -1,0 +1,662 @@
+[
+  {
+    "url": "",
+    "name": "夹饱堡",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "焙固镇、圆模镇、酿光市、深钵镇、锦汇镇、\n桌台市、渍沁镇、冰柜镇、玻瓶市"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E4%B9%9D%E5%85%AB%E9%85%92%E5%90%A7",
+    "name": "九八酒吧",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "酿光市、深钵镇、锦汇镇、桌台市、玻瓶市"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E9%A1%B6%E6%96%B0%E9%B2%9C%E9%A4%90%E5%8E%85",
+    "name": "顶新鲜餐厅",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "酿光市、锦汇镇、桌台市"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E5%9B%9E%E8%BD%89%E5%A4%A2%E6%83%B3%E5%AE%B6%EF%BC%88%E5%B8%95%E5%BA%95%E4%BA%9E%EF%BC%89",
+    "name": "回转梦想家",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "没找到"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E6%9D%A5%E6%9D%A5%E6%9D%A5%E8%BD%A9",
+    "name": "来来来轩",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "酿光市、锦汇镇、桌台市、玻瓶市"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E9%A3%A8%E5%AE%B6",
+    "name": "飨家",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "焙固镇、酿光市、锦汇镇、玻瓶市"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E7%99%BE%E5%BB%89%E5%AE%B6%E5%BA%AD%E9%A4%90%E5%8E%85",
+    "name": "百廉家庭餐厅",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "酿光市、深钵镇、桌台市"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E8%BF%8E%E6%BB%A8%E5%92%96%E5%95%A1",
+    "name": "迎滨咖啡",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "焙固镇、酿光市、深钵镇、锦汇镇、桌台市、玻瓶市"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E5%AD%A6%E7%94%9F%E9%A3%9F%E5%A0%82",
+    "name": "学生食堂",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "橘子学院／葡萄学院"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E5%AE%9D%E9%A3%9F%E5%A0%82",
+    "name": "宝食堂",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "锦汇镇"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E6%B5%B7%E5%B2%B1%E4%BF%B1%E4%B9%90%E9%83%A8",
+    "name": "海岱俱乐部",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "玻瓶市"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E4%BA%B2%E4%BA%B2%E5%90%89%E6%8B%BF%E6%A3%92%EF%BC%81",
+    "name": "亲亲吉拿棒！",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "酿光市、深钵镇、锦汇镇"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E6%81%8B%E6%81%8B%E4%B8%B2%E7%83%A7",
+    "name": "恋恋串烧",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "酿光市、深钵镇、锦汇镇、桌台市、冰柜镇、玻瓶市"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E5%85%B3%E9%83%BD%E5%8F%AF%E4%B8%BD%E9%A5%BC",
+    "name": "关都可丽饼",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "酿光市、深钵镇、桌台市、渍沁镇"
+  },
+  {
+    "url": "https://wiki.52poke.com/wiki/%E7%94%9C%E5%86%B7%E7%BE%8E%E6%BB%8B",
+    "name": "甜冷美滋",
+    "type": "place",
+    "foodName": "undefined",
+    "effect": "undefined",
+    "price": "undefined",
+    "place": "圆模镇、酿光市、深钵镇、平碟镇、锦汇镇、\n桌台市、渍沁镇、玻瓶市"
+  },
+  {
+    "type": "food",
+    "name": "夹饱堡",
+    "foodName": "香辣三明治",
+    "effect": "大大力：超能力 Lv.1\n经验力：格斗 Lv.1\n遭遇力：水 Lv.1",
+    "price": "1750"
+  },
+  {
+    "type": "food",
+    "name": "夹饱堡",
+    "foodName": "果酱三明治",
+    "effect": "捕获力：格斗 Lv.1\n掉物力：超能力 Lv.1\n蛋蛋力 Lv.1",
+    "price": "850"
+  },
+  {
+    "type": "food",
+    "name": "夹饱堡",
+    "foodName": "热带三明治",
+    "effect": "蛋蛋力 Lv.1\n遭遇力：格斗 Lv.1\n捕获力：龙 Lv.1",
+    "price": "1450"
+  },
+  {
+    "type": "food",
+    "name": "夹饱堡",
+    "foodName": "橘子酱三明治",
+    "effect": "掉物力：格斗 Lv.1\n捕获力：岩石 Lv.1\n蛋蛋力 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "夹饱堡",
+    "foodName": "牛油果三明治",
+    "effect": "经验力：龙 Lv.1\n遭遇力：电 Lv.1\n捕获力：恶 Lv.1",
+    "price": "1200"
+  },
+  {
+    "type": "food",
+    "name": "九八酒吧",
+    "foodName": "帕底亚海鲜饭",
+    "effect": "大大力：恶 Lv.1\n蛋蛋力 Lv.1\n掉物力：水 Lv.1",
+    "price": "1800"
+  },
+  {
+    "type": "food",
+    "name": "九八酒吧",
+    "foodName": "混合果汁",
+    "effect": "捕获力：超能力 Lv.1\n遭遇力：妖精 Lv.1\n小小力：水 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "九八酒吧",
+    "foodName": "烤蔬菜沙拉沙拉",
+    "effect": "团战力：冰 Lv.1\n遭遇力：龙 Lv.1\n经验力：超能力 Lv.1",
+    "price": "1500"
+  },
+  {
+    "type": "food",
+    "name": "九八酒吧",
+    "foodName": "烘蛋",
+    "effect": "掉物力：毒 Lv.1\n大大力：草 Lv.1\n蛋蛋力 Lv.1",
+    "price": "1600"
+  },
+  {
+    "type": "food",
+    "name": "九八酒吧",
+    "foodName": "油蒜毛崖蟹",
+    "effect": "遭遇力：电 Lv.1\n经验力：岩石 Lv.1\n团战力：妖精 Lv.1",
+    "price": "1500"
+  },
+  {
+    "type": "food",
+    "name": "顶新鲜餐厅",
+    "foodName": "海鲜小串",
+    "effect": "遭遇力：水 Lv.1\n团战力：恶 Lv.1\n经验力：幽灵 Lv.1",
+    "price": "1500"
+  },
+  {
+    "type": "food",
+    "name": "顶新鲜餐厅",
+    "foodName": "米布丁",
+    "effect": "掉物力：钢 Lv.1\n捕获力：草 Lv.1\n大大力：地面 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "顶新鲜餐厅",
+    "foodName": "柠汁腌鱼生",
+    "effect": "大大力：虫 Lv.1\n经验力：格斗 Lv.1\n掉物力：地面 Lv.1",
+    "price": "1300"
+  },
+  {
+    "type": "food",
+    "name": "顶新鲜餐厅",
+    "foodName": "烟熏鱼片佐香草",
+    "effect": "蛋蛋力 Lv.1\n小小力：幽灵 Lv.1\n经验力：妖精 Lv.1",
+    "price": "1400"
+  },
+  {
+    "type": "food",
+    "name": "顶新鲜餐厅",
+    "foodName": "海鲜通心粉",
+    "effect": "小小力：草 Lv.1\n掉物力：岩石 Lv.1\n团战力：飞行 Lv.1",
+    "price": "1600"
+  },
+  {
+    "type": "food",
+    "name": "回转梦想家",
+    "foodName": "４贯套餐　～花～",
+    "effect": "捕获力：钢 Lv.1\n经验力：虫 Lv.1\n小小力：龙 Lv.1",
+    "price": "2000"
+  },
+  {
+    "type": "food",
+    "name": "回转梦想家",
+    "foodName": "４贯套餐　～鸟～",
+    "effect": "小小力：电 Lv.1\n捕获力：龙 Lv.1\n团战力：草 Lv.1",
+    "price": "2000"
+  },
+  {
+    "type": "food",
+    "name": "回转梦想家",
+    "foodName": "４贯套餐　～风～",
+    "effect": "掉物力：岩石 Lv.1\n小小力：冰 Lv.1\n经验力：虫 Lv.1",
+    "price": "2000"
+  },
+  {
+    "type": "food",
+    "name": "回转梦想家",
+    "foodName": "４贯套餐　～月～",
+    "effect": "经验力：格斗 Lv.1\n团战力：地面 Lv.1\n蛋蛋力 Lv.1",
+    "price": "2000"
+  },
+  {
+    "type": "food",
+    "name": "回转梦想家",
+    "foodName": "味噌汤",
+    "effect": "大大力：飞行 Lv.1\n掉物力：水 Lv.1\n捕获力：冰 Lv.1",
+    "price": "900"
+  },
+  {
+    "type": "food",
+    "name": "回转梦想家",
+    "foodName": "限定４贯套餐　～霜～",
+    "effect": "团战力：水 Lv.2\n蛋蛋力 Lv.1\n掉物力：钢 Lv.1",
+    "price": "4000"
+  },
+  {
+    "type": "food",
+    "name": "回转梦想家",
+    "foodName": "限定４贯套餐　～霰～",
+    "effect": "经验力：虫 Lv.2\n小小力：超能力 Lv.1\n团战力：电 Lv.1",
+    "price": "4000"
+  },
+  {
+    "type": "food",
+    "name": "回转梦想家",
+    "foodName": "限定４贯套餐　～雹～",
+    "effect": "掉物力：龙 Lv.2\n蛋蛋力 Lv.1\n小小力：电 Lv.1",
+    "price": "4000"
+  },
+  {
+    "type": "food",
+    "name": "回转梦想家",
+    "foodName": "限定４贯套餐　～霙～",
+    "effect": "大大力：钢 Lv.2\n经验力：毒 Lv.1\n团战力：岩石 Lv.1",
+    "price": "4000"
+  },
+  {
+    "type": "food",
+    "name": "回转梦想家",
+    "foodName": "清汤",
+    "effect": "捕获力：幽灵 Lv.2\n大大力：水 Lv.1\n遭遇力：火 Lv.1",
+    "price": "3500"
+  },
+  {
+    "type": "food",
+    "name": "来来来轩",
+    "foodName": "麻婆豆腐",
+    "effect": "遭遇力：火 Lv.1\n掉物力：飞行 Lv.1\n小小力：超能力 Lv.1",
+    "price": "1700"
+  },
+  {
+    "type": "food",
+    "name": "来来来轩",
+    "foodName": "杏仁豆腐",
+    "effect": "蛋蛋力 Lv.1\n团战力：幽灵 Lv.1\n小小力：冰 Lv.1",
+    "price": "900"
+  },
+  {
+    "type": "food",
+    "name": "来来来轩",
+    "foodName": "醋拌原野水母小黄瓜",
+    "effect": "小小力：幽灵 Lv.1\n蛋蛋力 Lv.1\n掉物力：岩石 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "来来来轩",
+    "foodName": "青椒肉丝",
+    "effect": "掉物力：毒 Lv.1\n小小力：草 Lv.1\n蛋蛋力 Lv.1",
+    "price": "1700"
+  },
+  {
+    "type": "food",
+    "name": "来来来轩",
+    "foodName": "拉面",
+    "effect": "大大力：地面 Lv.1\n捕获力：一般 Lv.1\n团战力：恶 Lv.1",
+    "price": "1600"
+  },
+  {
+    "type": "food",
+    "name": "飨家",
+    "foodName": "妈妈的格雷派饼",
+    "effect": "大大力：龙 Lv.2\n捕获力：电 Lv.1\n团战力：火 Lv.1",
+    "price": "3000"
+  },
+  {
+    "type": "food",
+    "name": "飨家",
+    "foodName": "儿子的糖煮水果",
+    "effect": "蛋蛋力 Lv.2\n经验力：飞行 Lv.1\n遭遇力：妖精 Lv.1",
+    "price": "2800"
+  },
+  {
+    "type": "food",
+    "name": "飨家",
+    "foodName": "爷爷的什锦炖菜",
+    "effect": "掉物力：超能力 Lv.2\n遭遇力：冰 Lv.1\n捕获力：岩石 Lv.1",
+    "price": "3600"
+  },
+  {
+    "type": "food",
+    "name": "飨家",
+    "foodName": "奶奶的咸派",
+    "effect": "捕获力：冰 Lv.2\n经验力：妖精 Lv.1\n蛋蛋力 Lv.1",
+    "price": "3400"
+  },
+  {
+    "type": "food",
+    "name": "飨家",
+    "foodName": "女儿的菜肉炖汤",
+    "effect": "小小力：钢 Lv.2\n掉物力：火 Lv.1\n经验力：飞行 Lv.1",
+    "price": "3800"
+  },
+  {
+    "type": "food",
+    "name": "百廉家庭餐厅",
+    "foodName": "干咖喱",
+    "effect": "大大力：妖精 Lv.1\n团战力：地面 Lv.1\n捕获力：水 Lv.1",
+    "price": "1800"
+  },
+  {
+    "type": "food",
+    "name": "百廉家庭餐厅",
+    "foodName": "巧克力香草水果芭菲",
+    "effect": "捕获力：地面 Lv.1\n掉物力：恶 Lv.1\n经验力：毒 Lv.1",
+    "price": "1400"
+  },
+  {
+    "type": "food",
+    "name": "百廉家庭餐厅",
+    "foodName": "柠檬冰淇淋",
+    "effect": "掉物力：幽灵 Lv.1\n大大力：岩石 Lv.1\n经验力：一般 Lv.1",
+    "price": "900"
+  },
+  {
+    "type": "food",
+    "name": "百廉家庭餐厅",
+    "foodName": "凯撒沙拉",
+    "effect": "经验力：飞行 Lv.1\n小小力：一般 Lv.1\n掉物力：火 Lv.1",
+    "price": "1300"
+  },
+  {
+    "type": "food",
+    "name": "百廉家庭餐厅",
+    "foodName": "汉堡排＆油炸什锦",
+    "effect": "蛋蛋力 Lv.1\n遭遇力：飞行 Lv.1\n捕获力：妖精 Lv.1",
+    "price": "1900"
+  },
+  {
+    "type": "food",
+    "name": "迎滨咖啡",
+    "foodName": "香辣土豆",
+    "effect": "遭遇力：龙 Lv.1\n小小力：恶 Lv.1\n经验力：草 Lv.1",
+    "price": "1450"
+  },
+  {
+    "type": "food",
+    "name": "迎滨咖啡",
+    "foodName": "夹心饼",
+    "effect": "团战力：格斗 Lv.1\n捕获力：钢 Lv.1\n大大力：恶 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "迎滨咖啡",
+    "foodName": "柠檬水",
+    "effect": "小小力：恶 Lv.1\n蛋蛋力 Lv.1\n经验力：水 Lv.1",
+    "price": "900"
+  },
+  {
+    "type": "food",
+    "name": "迎滨咖啡",
+    "foodName": "咖啡",
+    "effect": "掉物力：水 Lv.1\n经验力：草 Lv.1\n大大力：钢 Lv.1",
+    "price": "850"
+  },
+  {
+    "type": "food",
+    "name": "迎滨咖啡",
+    "foodName": "芝士馅饼",
+    "effect": "团战力：幽灵 Lv.1\n蛋蛋力 Lv.1\n捕获力：超能力 Lv.1",
+    "price": "1600"
+  },
+  {
+    "type": "food",
+    "name": "学生食堂",
+    "foodName": "成熟滋味三明治",
+    "effect": "蛋蛋力 Lv.1\n小小力：钢 Lv.1\n团战力：超能力 Lv.1",
+    "price": "1700"
+  },
+  {
+    "type": "food",
+    "name": "学生食堂",
+    "foodName": "花生酱三明治",
+    "effect": "经验力：妖精 Lv.1\n遭遇力：电 Lv.1\n小小力：地面 Lv.1",
+    "price": "1020"
+  },
+  {
+    "type": "food",
+    "name": "学生食堂",
+    "foodName": "土豆沙拉三明治",
+    "effect": "掉物力：草 Lv.1\n捕获力：岩石 Lv.1\n小小力：幽灵 Lv.1",
+    "price": "1200"
+  },
+  {
+    "type": "food",
+    "name": "学生食堂",
+    "foodName": "酸黄瓜三明治",
+    "effect": "捕获力：恶 Lv.1\n遭遇力：岩石 Lv.1\n大大力：龙 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "学生食堂",
+    "foodName": "蛋三明治",
+    "effect": "大大力：格斗 Lv.1\n蛋蛋力 Lv.1\n掉物力：毒 Lv.1",
+    "price": "980"
+  },
+  {
+    "type": "food",
+    "name": "宝食堂",
+    "foodName": "芥末饭团",
+    "effect": "遭遇力：岩石 Lv.1\n捕获力：冰 Lv.1\n大大力：电 Lv.1",
+    "price": "750"
+  },
+  {
+    "type": "food",
+    "name": "宝食堂",
+    "foodName": "红豆汤",
+    "effect": "经验力：一般 Lv.1\n掉物力：钢 Lv.1\n遭遇力：毒 Lv.1",
+    "price": "800"
+  },
+  {
+    "type": "food",
+    "name": "宝食堂",
+    "foodName": "自家制梅干",
+    "effect": "小小力：火 Lv.1\n经验力：幽灵 Lv.1\n蛋蛋力 Lv.1",
+    "price": "500"
+  },
+  {
+    "type": "food",
+    "name": "宝食堂",
+    "foodName": "苦瓜杂炒",
+    "effect": "掉物力：地面 Lv.1\n大大力：幽灵 Lv.1\n遭遇力：岩石 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "宝食堂",
+    "foodName": "清汤荞麦面",
+    "effect": "蛋蛋力 Lv.1\n遭遇力：火 Lv.1\n团战力：草 Lv.1",
+    "price": "920"
+  },
+  {
+    "type": "food",
+    "name": "海岱俱乐部",
+    "foodName": "担担面",
+    "effect": "掉物力：火 Lv.2\n大大力：草 Lv.1\n蛋蛋力 Lv.1",
+    "price": "3600"
+  },
+  {
+    "type": "food",
+    "name": "海岱俱乐部",
+    "foodName": "豆花",
+    "effect": "经验力：毒 Lv.2\n遭遇力：超能力 Lv.1\n团战力：冰 Lv.1",
+    "price": "3000"
+  },
+  {
+    "type": "food",
+    "name": "海岱俱乐部",
+    "foodName": "酸辣汤",
+    "effect": "蛋蛋力 Lv.2\n掉物力：妖精 Lv.1\n大大力：格斗 Lv.1",
+    "price": "3200"
+  },
+  {
+    "type": "food",
+    "name": "海岱俱乐部",
+    "foodName": "青茶",
+    "effect": "小小力：龙 Lv.2\n捕获力：幽灵 Lv.1\n掉物力：冰 Lv.1",
+    "price": "2800"
+  },
+  {
+    "type": "food",
+    "name": "海岱俱乐部",
+    "foodName": "佛跳墙",
+    "effect": "大大力：岩石 Lv.2\n经验力：超能力 Lv.1\n捕获力：钢 Lv.1",
+    "price": "3800"
+  },
+  {
+    "type": "food",
+    "name": "亲亲吉拿棒！",
+    "foodName": "吉拿棒",
+    "effect": "经验力：超能力 Lv.1\n捕获力：地面 Lv.1\n小小力：火 Lv.1",
+    "price": "850"
+  },
+  {
+    "type": "food",
+    "name": "亲亲吉拿棒！",
+    "foodName": "巧克力吉拿棒",
+    "effect": "遭遇力：超能力 Lv.1\n掉物力：虫 Lv.1\n团战力：一般 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "亲亲吉拿棒！",
+    "foodName": "肉桂吉拿棒",
+    "effect": "捕获力：龙 Lv.1\n蛋蛋力 Lv.1\n小小力：草 Lv.1",
+    "price": "900"
+  },
+  {
+    "type": "food",
+    "name": "恋恋串烧",
+    "foodName": "烤肉串",
+    "effect": "掉物力：恶 Lv.1\n小小力：龙 Lv.1\n经验力：岩石 Lv.1",
+    "price": "1200"
+  },
+  {
+    "type": "food",
+    "name": "恋恋串烧",
+    "foodName": "烤饭团",
+    "effect": "遭遇力：妖精 Lv.1\n小小力：电 Lv.1\n蛋蛋力 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "关都可丽饼",
+    "foodName": "草莓巧克力可丽饼",
+    "effect": "团战力：水 Lv.1\n捕获力：妖精 Lv.1\n蛋蛋力 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "关都可丽饼",
+    "foodName": "草莓鲜奶油可丽饼",
+    "effect": "经验力：地面 Lv.1\n大大力：冰 Lv.1\n遭遇力：电 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "关都可丽饼",
+    "foodName": "巧克力香蕉可丽饼",
+    "effect": "蛋蛋力 Lv.1\n遭遇力：水 Lv.1\n小小力：钢 Lv.1",
+    "price": "900"
+  },
+  {
+    "type": "food",
+    "name": "甜冷美滋",
+    "foodName": "巧克力薄荷冰淇淋",
+    "effect": "团战力：妖精 Lv.1\n大大力：钢 Lv.1\n蛋蛋力 Lv.1",
+    "price": "950"
+  },
+  {
+    "type": "food",
+    "name": "甜冷美滋",
+    "foodName": "苏打冰淇淋",
+    "effect": "经验力：一般 Lv.1\n捕获力：水 Lv.1\n大大力：火 Lv.1",
+    "price": "900"
+  },
+  {
+    "type": "food",
+    "name": "甜冷美滋",
+    "foodName": "草莓冰淇淋",
+    "effect": "蛋蛋力 Lv.1\n经验力：水 Lv.1\n团战力：岩石 Lv.1",
+    "price": "900"
+  },
+  {
+    "type": "food",
+    "name": "甜冷美滋",
+    "foodName": "芒果冰淇淋",
+    "effect": "小小力：一般 Lv.1\n团战力：龙 Lv.1\n捕获力：电 Lv.1",
+    "price": "900"
+  },
+  {
+    "type": "food",
+    "name": "甜冷美滋",
+    "foodName": "盐石宝岩盐冰淇淋",
+    "effect": "大大力：冰 Lv.1\n掉物力：草 Lv.1\n捕获力：恶 Lv.1",
+    "price": "900"
+  },
+  {
+    "type": "food",
+    "name": "甜冷美滋",
+    "foodName": "TERIYAKI冰淇淋",
+    "effect": "掉物力：虫 Lv.1\n团战力：格斗 Lv.1\n蛋蛋力 Lv.1",
+    "price": "1150"
+  },
+  {
+    "type": "food",
+    "name": "甜冷美滋",
+    "foodName": "烤饭团",
+    "effect": "遭遇力：妖精 Lv.1\n小小力：电 Lv.1\n蛋蛋力 Lv.1",
+    "price": "950\n（锦汇镇）"
+  }
+]

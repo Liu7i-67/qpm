@@ -19,3 +19,12 @@ cd android
 
 ./gradlew assembleRelease
 ```
+
+- 构建时如果下载包的速度很慢，自行修改`android/gradle.properties`中的代理配置,例如：
+
+```bash
+systemProp.http.proxyHost=127.0.0.1
+systemProp.http.proxyPort=7890
+systemProp.https.proxyHost=127.0.0.1
+systemProp.https.proxyPort=7890
+```
